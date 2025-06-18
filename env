@@ -1,0 +1,5 @@
+ES_URL=http://localhost:9200
+ES_USERNAME=elastic
+ES_PASSWORD=password
+ES_INDEX=rag_lc_index
+OPENAI_API_KEY=<API_KEY>

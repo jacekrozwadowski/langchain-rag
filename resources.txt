@@ -1,0 +1,13 @@
+python-dotenv
+black
+langchain[openai]
+langchain-openai
+langchain-chroma
+langchain-community
+langchain-elasticsearch
+langchain-text-splitters
+langgraph
+pypdf
+spacy
+
+# python -m spacy download pl_core_news_md
