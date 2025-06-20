@@ -125,6 +125,7 @@ Elasticsearch
 https://python.langchain.com/docs/integrations/vectorstores/elasticsearch/
 https://python.langchain.com/docs/integrations/retrievers/elasticsearch_retriever/
 
-MultiQueryRetriever
+Retriever
 https://python.langchain.com/docs/how_to/MultiQueryRetriever/
+https://python.langchain.com/docs/concepts/retrievers/
 ```
