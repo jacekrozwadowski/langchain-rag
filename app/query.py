@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 if __name__ == "__main__":
     llm = init_chat_model("gpt-4.1-nano", model_provider="openai")
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")

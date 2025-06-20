@@ -72,3 +72,17 @@ Jego obowiązki obejmują wspieranie w inspekcji i adaptacji procesów, ułatwia
 arzeń scrumowych oraz rozwiązywanie barier, aby zespół mógł tworzyć wartościowe przyrosty. W skrócie, Scrum Master 
 dba o to, aby Scrum był prawidłowo wdrożony i funkcjonował zgodnie z jego ramami, wspierając zespół i organizację.
 ```
+
+# Documentation
+```text
+RAG
+https://python.langchain.com/docs/tutorials/rag/
+https://python.langchain.com/docs/tutorials/qa_chat_history/
+
+Elasticsearch
+https://python.langchain.com/docs/integrations/vectorstores/elasticsearch/
+https://python.langchain.com/docs/integrations/retrievers/elasticsearch_retriever/
+
+MultiQueryRetriever
+https://python.langchain.com/docs/how_to/MultiQueryRetriever/
+```
