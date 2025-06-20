@@ -73,6 +73,48 @@ arzeń scrumowych oraz rozwiązywanie barier, aby zespół mógł tworzyć warto
 dba o to, aby Scrum był prawidłowo wdrożony i funkcjonował zgodnie z jego ramami, wspierając zespół i organizację.
 ```
 
+# Ask RAG system with chat
+```text
+Query: Czym różni się Agile od Scrum'a?
+Answer: Agile to ogólna filozofia i zbiór wartości, które promują elastyczność, współpracę i szybkie dostarczanie wartości, 
+natomiast Scrum jest konkretnym ramem postępowania (framework) opartym na tej filozofii, z jasno określonymi rolami, 
+wydarzeniami i artefaktami. Scrum jest jednym ze sposobów realizacji zasad Agile, skupiając się na iteracyjnym i 
+przyrostowym rozwoju, podczas gdy Agile to szeroki zbiór praktyk i wartości. Różni się więc poziomem ogólności: 
+Agile jest koncepcją, a Scrum konkretnym narzędziem do jej wdrażania.
+
+Query: Co to jest Agile?
+Answer: Agile to metoda zarządzania projektami oparta na częstym wydawaniu działających wersji oprogramowania 
+i zbieraniu informacji zwrotnej. Skupia się na celach, które chce się osiągnąć, i na tym, jak znaleźć odpowiednie 
+rozwiązania, z zachowaniem elastyczności wobec zmian. Kluczowe elementy to ludzie, interakcje, działające oprogramowanie, 
+współpraca z klientem i reakcja na zmiany.
+
+Query: Co to jest Sprint?
+Answer: Sprint to planowane wydarzenie o ustalonej długości, trwające maksymalnie miesiąc, podczas którego skupia się 
+na realizacji określonych celów. Rozpoczyna się natychmiast po zakończeniu poprzedniego i obejmuje pracę 
+nad osiągnięciem celu Sprintu, czyli konkretnego kroku w realizacji Produktu. W trakcie Sprintu nie wprowadza się zmian, 
+które zagrażałyby celu, a praca jest inspekowana i adaptowana zgodnie z potrzebami.
+
+Query: Jak duży powinien być zespół w Scrum?
+Answer: W Scrum, optymalny rozmiar zespołu deweloperskiego wynosi zazwyczaj od 3 do 9 osób. Taki rozmiar pozwala
+na skuteczną komunikację, współpracę oraz elastyczność w realizacji zadań. Zespół ten nazywany jest Scrum Team 
+i składa się z trzech ról: Product Owner, Scrum Master oraz Zespół Deweloperski. Najważniejsze jest, aby zespół był 
+wystarczająco mały, by mógł działać zwinie i szybko się komunikować, jednocześnie na tyle duży, 
+by realizować kompleksowe zadania i dostarczać wartość.
+
+Query: Jak duży powinien być zespół w Agile?
+Answer: W Agile nie ma jednej idealnej wielkości zespołu, ponieważ optymalna liczba zależy od wielu czynników, 
+takich jak projekt, zakres prac i dostępne zasoby. Jednakże, zgodnie z najlepszymi praktykami, zespoły Agile 
+zwykle składają się z 5 do 9 członków. Taki rozmiar pozwala na efektywną komunikację, współpracę i szybką reakcję 
+na zmiany, jednocześnie umożliwiając zachowanie autonomii i elastyczności zespołu.Czy chcesz, abym znalazł szczegółowe 
+źródła lub wytyczne na ten temat?
+
+Query: Jakie jest zadanie Scrum Master'a?
+Answer: Scrum Master odpowiada za to, aby Scrum był stosowany zgodnie z opisem w przewodniku, pomagając wszystkim 
+w zrozumieniu teorii i praktyki Scrum. Ponosi też odpowiedzialność za efektywność Scrum Teamu, tworząc odpowiednie 
+warunki do poprawy praktyk i wspierając jego działania. Scrum Master pełni rolę lidera wspierającego, działając 
+na rzecz organizacji i zespołu.
+```
+
 # Documentation
 ```text
 RAG
