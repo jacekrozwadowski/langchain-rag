@@ -15,9 +15,11 @@ load_dotenv()
 
 if __name__ == "__main__":
 
+    # llm/embedding setup
     llm = init_chat_model("gpt-4.1-nano", model_provider="openai")
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
+    # Prepare hybrid query to ES
     def hybrid_query(search_query: str) -> Dict:
         terms = ["hr"]
         vector = embeddings.embed_query(search_query)  # same embeddings as for indexing
@@ -58,6 +60,7 @@ if __name__ == "__main__":
             "size": 5,
         }
 
+    # prepare retriever
     hybrid_retriever = ElasticsearchRetriever.from_es_params(
         index_name=os.environ["ES_INDEX"],
         body_func=hybrid_query,
@@ -67,6 +70,7 @@ if __name__ == "__main__":
         password=os.environ["ES_PASSWORD"],
     )
 
+    # retriever tool used in graph
     @tool(response_format="content_and_artifact")
     def retrieve(query: str):
         """Retrieve information related to a query."""
@@ -80,7 +84,7 @@ if __name__ == "__main__":
         )
         return serialized, retrieved_docs
 
-    # Step 1: Generate an AIMessage that may include a tool-call to be sent.
+    # generate new query or response based on original query content
     def query_or_respond(state: MessagesState):
         """Generate tool call for retrieval or respond."""
         llm_with_tools = llm.bind_tools([retrieve])
@@ -91,7 +95,7 @@ if __name__ == "__main__":
     # Step 2: Execute the retrieval.
     tools = ToolNode([retrieve])
 
-    # Step 3: Generate a response using the retrieved content.
+    # generate a response using the retrieved content.
     def generate(state: MessagesState):
         """Generate answer."""
         # Get generated ToolMessages
@@ -127,7 +131,7 @@ if __name__ == "__main__":
         response = llm.invoke(prompt)
         return {"messages": [response]}
 
-    # graph
+    # build graph
     graph_builder = StateGraph(MessagesState)
     graph_builder.add_node(query_or_respond)
     graph_builder.add_node(tools)
@@ -144,7 +148,7 @@ if __name__ == "__main__":
 
     graph = graph_builder.compile()
 
-    # Query
+    # asked for query
     for query in [
         "Czym różni się Agile od Scrum'a?",
         "Co to jest Agile?",
